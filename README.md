@@ -1,13 +1,37 @@
-# portfolio
+# Portfolio
 
 
-# how it works:
+## How it works:
 - python3 -m venv venv
 - source venv/bin/activate
 - pip install -r requirements
 - python3 app.py
 
+-----
 
+## Features:
+
+###
+
+----
+
+## Technologies Used:
+
+- Python
+- Flask
+- SQLAlchemy
+- SQLite
+- github
+- jinja
+- HTML
+- CSS
+-----
+
+###
+
+-----
+
+## What I Learned:
 
 # sqlite3 relational db file
 
@@ -38,3 +62,11 @@
 # css
 
 # custom error pages in flask
+
+-----
+
+##
+clone:
+```bash
+git clone https://github.com/gutiluis/Techdegree-project-5.git
+```
