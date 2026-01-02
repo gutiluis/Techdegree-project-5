@@ -1,0 +1,34 @@
+{% extends 'layout.html' %}
+
+
+{% block button %}
+{% endblock %}
+
+{% block content %}
+    <section>
+        <fieldset>
+            <div class='form-container'>
+                <label for='title'>Title</label>
+                <input id='title' name='title' type='text' placeholder='project title' value="{{ project.title }}">
+            </div>
+        </fieldset>
+        <fieldset>
+            <div class="form-container">
+                <label for="description">Description</label>
+                <input id="description" type="text" placeholder="project description" value="{{ project.description }}">
+            </div>
+        </fieldset>
+        <fieldset>
+            <div class="form-container">
+                <label for="skills">Skills</label>
+                <input id="skills" name="github_repo" type="text" placeholder="project skills" value="{{ project.skills }}">
+            </div>
+        </fieldset>
+        <fieldset>
+            <div class="form-container">
+                <label for="github_repo"><i class="url-repo"></i> Github Repo</label>
+                <input id="github_repo" name="github_repo" type="text" placeholder="github repo">
+            </div>
+        </fieldset>
+    </section>
+{% endblock %}
