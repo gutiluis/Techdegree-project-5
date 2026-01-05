@@ -1,5 +1,6 @@
 __pycache__/
-venv
+venv/
 # sqlitedb
-instance
+instance/
 projects.db
+test/

@@ -41,8 +41,9 @@
 
 # what is sqlalchemy
     - db_column_model
+    - imperative mapping and declarative mapping
 
-# what is flask
+# what is flask:
     - render_template
     - url_for:
         send-subbmit the html form. not just leave it in the browser user-agent as a post request
@@ -58,10 +59,39 @@
 # how to use jinja:
     - for loops
     - blocks
+    - the child file does not have body, or head html tags
+    - cannot define twice a block in the base
+    - only if the child has new code the layout should have a block
+    - use double quotes for html attributes
+    - order of attributes does not matter. however there is a convention
+
+# what is automatic autoescaping in jinja templates
+
+
+
+# what is bootstrap
+    - css framework with optional javascript
+    - <link> tag inside the head for css
+    - <scrip></script> tag for javascript
+    - use bootstrap in head and body before closing the body
+    - bundle: modals, dropdowns, collapse, tooltips, popovers, carousel
+    - subresource integrity (SRI)
+    - bootstrap.css classes
+    - bootstap.js
+    - removed crossorigin and integrity hash
+
 
 # css
+    - At-rules
+        - keyframes
+        - mediaqueries
 
 # custom error pages in flask
+
+# html:
+    - the same name of the form attribute should be used with sqlalchemy when creating the model object instance
+
+
 
 -----
 

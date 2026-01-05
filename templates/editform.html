@@ -1,34 +1,23 @@
 {% extends 'layout.html' %}
 
-
-{% block button %}
-{% endblock %}
-
 {% block content %}
-    <section>
-        <fieldset>
-            <div class='form-container'>
-                <label for='title'>Title</label>
-                <input id='title' name='title' type='text' placeholder='project title' value="{{ project.title }}">
+    <section id="form">
+        <form action="{{ url_for('project_edit') }}" method="POST">
+            <label for="title">Project Title</label>
+            <input type="text" name="title" id="title" placeholder="Project Name" value="{{ project.title }}" required aria-required="true">
+            <label for="date">Completion Date</label>
+            <input type="month" name="date" id="date" value="{{ project.created }}" required aria-required="true">
+            <label for="description">Description</label>
+            <textarea name="desc" id="description" cols="30" rows="20" placeholder="Description" value="{{ project.description }}" required aria-required="true"></textarea>
+            <label for="skills-list" id="skills-label">Skills</label>
+            <p>Separate each skill by a comma</p>
+            <textarea name="skills" id="skills-list" cols="30" rows="10" placeholder="Skill, Skill" value="{{ project.skills }}" required aria-required="true"></textarea>
+            <label for="github">GitHub Link</label>
+            <input type="url" name="github" id="github" placeholder="Link to the repo" value="{{ project.gitub_repo}}" required aria-required="true">
+            <div>
+                <button type="reset">Cancel</button>
+                <button type="submit">Submit</button>
             </div>
-        </fieldset>
-        <fieldset>
-            <div class="form-container">
-                <label for="description">Description</label>
-                <input id="description" type="text" placeholder="project description" value="{{ project.description }}">
-            </div>
-        </fieldset>
-        <fieldset>
-            <div class="form-container">
-                <label for="skills">Skills</label>
-                <input id="skills" name="github_repo" type="text" placeholder="project skills" value="{{ project.skills }}">
-            </div>
-        </fieldset>
-        <fieldset>
-            <div class="form-container">
-                <label for="github_repo"><i class="url-repo"></i> Github Repo</label>
-                <input id="github_repo" name="github_repo" type="text" placeholder="github repo">
-            </div>
-        </fieldset>
+        </form>
     </section>
 {% endblock %}

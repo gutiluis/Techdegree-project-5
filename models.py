@@ -1,7 +1,3 @@
-# model class for adding and editting project information:
-# title, description, date, skills practiced, github repo
-# connect to the database
-# the database should contain at least the 4 previous projects
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
