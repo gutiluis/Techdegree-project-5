@@ -33,7 +33,7 @@
 
 ## What I Learned:
 
-# sqlite3 relational db file
+# SQLite relational db file
 
 # what is flask-sqlalchemy
     - __tablename__ is assumed with flasksqlalchemy extension within the model
