@@ -21,10 +21,11 @@
 - Flask
 - SQLAlchemy
 - SQLite
-- github
-- jinja
+- Github
+- Jinja2
 - HTML
 - CSS
+
 -----
 
 ###
@@ -46,7 +47,8 @@
 # what is flask:
     - render_template
     - url_for:
-        send-subbmit the html form. not just leave it in the browser user-agent as a post request
+        - send-subbmit the html form. not just leave it in the browser user-agent as a post request
+        - used to implement an internal flask route function
     - redirect
     - request:
         -proxy
@@ -81,7 +83,7 @@
     - removed crossorigin and integrity hash
 
 
-# css
+# CSS
     - At-rules
         - keyframes
         - mediaqueries
@@ -91,6 +93,21 @@
 # html:
     - the same name of the form attribute should be used with sqlalchemy when creating the model object instance
 
+# http:
+    - 302 found request post, 200, 304
+    - cache
+    - GET, POST
+    - URI
+
+# how to use sqlite3 CLI:
+    - sqlite3 db_file.db
+    - .tables
+    - select * from table_name;
+    
+    # update sqlitedb with or with transactions
+    - UPDATE project
+    - SET id = '2'
+    - WHERE id = 1;
 
 
 -----

@@ -4,8 +4,8 @@ from models import db, Project, app
 
 @app.route('/')
 def index():
-    project = Project.query.all()
-    return render_template('index.html', project=project)
+    projects = Project.query.all()
+    return render_template('index.html', projects=projects)
 
 
 @app.route('/projects/new', methods=["GET", "POST"])
@@ -26,11 +26,6 @@ def add_project():
 @app.route('/project_detail/<id>')
 def project_detail(id):
     project = Project.query.get_or_404(id)
-    if request.form:
-        project.title = request.form['title']
-        project.description = request.form['desc']
-        project.skills = request.form['skills']
-        project.github_repo = request.form['github']
     return render_template('detail.html', project=project)
 
 

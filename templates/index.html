@@ -20,12 +20,14 @@
             <li>Python</li>
             <li>Flask</li>
             <li>SQLAlchemy</li>
-            <li>GitHub</li>
+            <li>GitHub/Git</li>
             <li>Visual Studio Code</li>
             <li>Bash/Linux</li>
-            <li>HTML</li>
-            <li>CSS</li>
+            <li>HTML/CSS</li>
             <li>Jinja2</li>
+            <li>Docker</li>
+            <li>SQLite/MySQL</li>
+            <li>sqlite3 CLI</li>
         </ul>
     </section>
     <section id="projects">
@@ -33,67 +35,23 @@
         <i class="fas fa-file-code"></i>
         <h2>Projects</h2>
         <div id="project-list">
-            <div id="project1" class="a-project">
-                <h3>Project Title</h3>
-                <a href="https://github.com/gutiluis/Techdegree-project-1" class="github-btn">
-                    <i class="fab fa-github"></i>
-                    View on GitHub
-                </a>
-                <p>
-                    Pastry wafer chocolate cake caramels. 
-                    Gummi bears pudding sugar plum macaroon. 
-                </p>
-                <p>
-                    Skills: Pastry wafer chocolate cake caramels. 
-                    Gummi bears pudding sugar plum macaroon. 
-                </p>
-            </div>
-            <div id="project2" class="a-project">
-                <h3>Project Title</h3>
-                <a href="https://github.com/gutiluis/Techdegree-project-2" class="github-btn">
-                    <i class="fab fa-github"></i>
-                    View on GitHub
-                </a>
-                <p>
-                    Pastry wafer chocolate cake caramels. 
-                    Gummi bears pudding sugar plum macaroon. 
-                </p>
-                <p>
-                    Skills: Pastry wafer chocolate cake caramels. 
-                    Gummi bears pudding sugar plum macaroon. 
-                </p>
-            </div>
-            <div id="project3" class="a-project">
-                <h3>Project Title</h3>
-                <a href="https://github.com/gutiluis/Techdegree-project-3" class="github-btn">
-                    <i class="fab fa-github"></i>
-                    View on GitHub
-                </a>
-                <p>
-                    Pastry wafer chocolate cake caramels. 
-                    Gummi bears pudding sugar plum macaroon. 
-                </p>
-                <p>
-                    Skills: Pastry wafer chocolate cake caramels. 
-                    Gummi bears pudding sugar plum macaroon. 
-                </p>
-            </div>
-            <div id="project4" class="a-project">
-                <h3>Project Title</h3>
-                <a href="https://github.com/gutiluis/Techdegree-project-4" class="github-btn">
-                    <i class="fab fa-github"></i>
-                    View on GitHub
-                </a>
-                <p>
-                    Pastry wafer chocolate cake caramels. 
-                    Gummi bears pudding sugar plum macaroon. 
-                </p>
-                <p>
-                    Skills: Pastry wafer chocolate cake caramels. 
-                    Gummi bears pudding sugar plum macaroon. 
-                </p>
-            </div>
-        </div>
+
+            {% for project in projects %}
+                <div class="a-project">
+                    <h3>Project Title</h3>
+                    <a href="{{ project.github_repo }}" class="github-btn">
+                        <i class="fab fa-github"></i>
+                        View on GitHub
+                    </a>
+                    <p>
+                        {{ project.description }} 
+                    </p>
+                    <p>
+                        {{ project.skills }}
+                    </p>
+                </div>
+            {% endfor %}
+            
         <div id="triangle4"></div>
     </section>
     <section id="contact">
