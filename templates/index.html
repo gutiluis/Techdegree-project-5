@@ -1,33 +1,38 @@
 {% extends 'layout.html' %}
+
 {% block content %}
     <section class="header">
         <h1>Python Developer</h1>
-        <p>A short one-liner about your love of coding.</p>
+        <p>Coding myself out.</p>
         <img src="https://fictionhorizon.com/wp-content/uploads/2020/09/14808971.jpg" alt="Headshot of myself">
     </section>
+
     <section id="about">
-        <h2>About Me</h2>
+        <h2>
+            <a href="{{ url_for('about_me') }}">
+                About Me
+            </a>
+        </h2>
         <p>
-            Full-stack developer.
+            Terminal web developer enthusiast.
         </p>
         <div id="triangle1"></div>
         <div id="triangle2"></div>
     </section>
+
     <section id="skills">
         <i class="fas fa-laptop-code"></i>
         <h2>Skills</h2>
         <ul>
             <li>Python</li>
-            <li>Flask</li>
+            <li>Flask/Jinja2</li>
             <li>SQLAlchemy</li>
             <li>GitHub/Git</li>
             <li>Visual Studio Code</li>
             <li>Bash/Linux</li>
             <li>HTML/CSS</li>
-            <li>Jinja2</li>
             <li>Docker</li>
             <li>SQLite/MySQL</li>
-            <li>sqlite3 CLI</li>
         </ul>
     </section>
     <section id="projects">
@@ -38,7 +43,11 @@
 
             {% for project in projects %}
                 <div class="a-project">
-                    <h3>Project Title</h3>
+                    <h3>
+                        <a href="{{ url_for('project_detail', id=project.id) }}">
+                            {{ project.title }}
+                        </a>
+                    </h3>
                     <a href="{{ project.github_repo }}" class="github-btn">
                         <i class="fab fa-github"></i>
                         View on GitHub
@@ -58,14 +67,13 @@
         <i class="fas fa-paper-plane"></i>
         <h2>Contact Me</h2>
         <p>
-            Pastry wafer chocolate cake caramels. 
-            Gummi bears pudding sugar plum macaroon. 
-            Cake tart apple pie soufflé sweet sweet. 
-            Topping bear claw lemon drops gingerbread biscuit pudding fruitcake icing chocolate bar.
+            Send an email
         </p>
         <p>
             <i class="fas fa-envelope"></i>
-            gutierrez.luis@icloud.com
+            <a href="mailto:gutierrez.luis@icloud.com">
+                gutierrez.luis@icloud.com
+            </a>
         </p>
     </section>
 {% endblock %}
