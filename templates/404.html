@@ -1,10 +1,12 @@
+{% extends 'layout.html' %}
 
-<section id="not-found">
-    <img src="https://media.giphy.com/media/DvyLQztQwmyAM/giphy.gif" alt="Surprised Dog Gif">
-    <h2>Hmm...it seems this page can't be fetched.<i class="fas fa-baseball-ball"></i></h2>
-    <p>{{ msg }}</p>
-    <a href="{{ url_for('index') }}">
-        <button><i class="fas fa-home"></i><i class="fas fa-bone"></i>Go Home</button>
-    </a>
-</section>
-
+{% block content %}
+    <section id="not-found">
+        <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3l2MmhrY2RzZXAzNXFzdDdiN3FwdHBrcDI3NDNhNTF6Z3Y4MG1wNSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/vUIQPcOSJnZG8/giphy.gif" alt="King of the hill water hose Gif">
+        <h2>Unavailable search. Please try again...</h2>
+        <p>{{ msg }}</p>
+        <a href="{{ url_for('index') }}">
+            <button><i class="fas fa-home"></i>Go Home</button>
+        </a>
+    </section>
+{% endblock %}
