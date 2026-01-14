@@ -23,11 +23,11 @@
         <div id="triangle6"></div>
     </section>
     <section id="edit-delete">
-        <a href="{{ url_for('project_edit', id=project.id) }}">
+        <a href="{{ url_for('project_edit', project_id=project.id) }}">
             <i class="fas fa-edit"></i>
             Edit
         </a>
-        <a href="{{ url_for('project_delete', id=project.id) }}">
+        <a href="{{ url_for('project_delete', project_id=project.id) }}">
             <i class="far fa-trash-alt"></i>
             Delete
         </a>

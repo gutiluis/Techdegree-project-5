@@ -1,8 +1,10 @@
+"""Database models in sqlalchemy for the flask app."""
+import datetime
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import Mapped, mapped_column
 from sqlalchemy import Text, String, Date
-import datetime
+
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///projects.db'
@@ -10,6 +12,7 @@ db = SQLAlchemy(app)
 
 
 class Project(db.Model):
+    """SQLAlchemy model"""
     __tablename__ = 'projects'
     # primary_key is implicitly nullable=False
     id: Mapped[int] = mapped_column(primary_key=True)
