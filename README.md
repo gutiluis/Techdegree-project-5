@@ -1,4 +1,4 @@
-# Portfolio
+# Portfolio with SQLAlchemy
 
 
 ## How it works:
@@ -7,9 +7,16 @@
 - pip install -r requirements
 - python3 app.py
 
+
+
+
 -----
 
 ## Features:
+
+- ORM
+- Relational Database
+- html, css, jinja2, flask, python
 
 ###
 
@@ -54,9 +61,6 @@
         -proxy
         -access incoming request data after using url_for and GET and POST methods
     - app context(). create_all()
-    - flask shell
-
-# how to add users to the db manually:
 
 # how to use jinja:
     - for loops
@@ -67,11 +71,9 @@
     - use double quotes for html attributes
     - order of attributes does not matter. however there is a convention
 
-# what is automatic autoescaping in jinja templates
+# Automatic autoescaping in jinja templates
 
-
-
-# what is bootstrap
+# what is bootstrap:
     - css framework with optional javascript
     - <link> tag inside the head for css
     - <scrip></script> tag for javascript
