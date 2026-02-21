@@ -15,7 +15,7 @@
        <section class="navigation">
             <nav class="navbar navbar-expand-lg">
                 <div class="container-fluid">
-                  <a class="navbar-brand" href="#">Name: Zero_Cool</a>
+                  <a class="navbar-brand" href="#">Name: Luis G</a>
                   <button class="toggle" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fas fa-bars"></i>
                   </button>
@@ -25,7 +25,9 @@
                         <a class="nav-link active" aria-current="page" href="{{ url_for('index') }}">Home</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        {% block button %}
+                          <a class="nav-link" href="#about">About</a>
+                        {% endblock %}
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="#skills">Skills</a>
@@ -35,14 +37,19 @@
                           Projects
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <li><a class="dropdown-item" href="#project1">Project 1</a></li>
-                          <li><a class="dropdown-item" href="#project2">Project 2</a></li>
-                          <li><a class="dropdown-item" href="#project3">Project 3</a></li>
-                          <li><a class="dropdown-item" href="#project4">Project 4</a></li>
+                        {% for project in projects %}
+                          <li>
+                            <a class="dropdown-item" href="{{ url_for('project_detail', project_id=project.id) }}">
+                              {{ project.title }}
+                            </a>
+                          </li>
+                        {% endfor %}
                         </ul>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        {% block contact %}
+                          <a class="nav-link" href="#contact">Contact</a>
+                        {% endblock %}
                       </li>
                       <li class="nav-item">
                         <a class="nav-link" href="{{ url_for('add_project') }}">Add Project</a>
