@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <section class="header">
+        <h1>{{ project.title }}</h1>
+        <p>{{ project.created.strftime('%Y-%m') }}</p>
+        <a href="{{ project.github_repo }}" class="github-btn">
+            <i class="fab fa-github"></i>
+            View on GitHub
+        </a>
+        <ul class="project-skills">
+            <div>
+                <li>{{ project.skills }}</li>
+            </div>
+        </ul>
+    </section>
+    <section id="project-desc">
+        <div id="triangle5"></div>
+        <h2>Description</h2>
+        <p>
+            {{ project.description }}
+        </p>
+        <div id="triangle6"></div>
+    </section>
+    <section id="edit-delete">
+        <a href="{{ url_for('project_edit', project_id=project.id) }}">
+            <i class="fas fa-edit"></i>
+            Edit
+        </a>
+        <a href="{{ url_for('project_delete', project_id=project.id) }}">
+            <i class="far fa-trash-alt"></i>
+            Delete
+        </a>
+    </section>
+{% endblock %}
